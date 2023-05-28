@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'book-create',
+    loadChildren: () => import('./pages/book-create/book-create.module').then( m => m.BookCreatePageModule)
+  },
+  {
+    path: 'book-details/:id',
+    loadChildren: () => import('./pages/book-details/book-details.module').then( m => m.BookDetailsPageModule)
+  },
+  {
+    path: 'book-see-details/:id',
+    loadChildren: () => import('./pages/book-see-details/book-see-details.module').then( m => m.BookSeeDetailsPageModule)
+  },
 ];
 
 @NgModule({

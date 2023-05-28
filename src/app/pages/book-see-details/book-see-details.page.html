@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ver Informações da Obra
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input readonly="true" formControlName="titulo" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Editora</ion-label>
+        <ion-input readonly="true" formControlName="editora" type="text" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Autor</ion-label>
+        <ion-input readonly="true" formControlName="author" type="text" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ano Publicação</ion-label>
+        <ion-input readonly="true" formControlName="ano_publicacao" type="text" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Edição</ion-label>
+        <ion-input readonly="true" formControlName="edicao" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Língua</ion-label>
+        <ion-input readonly="true" formControlName="lingua" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" 
+          expand="block">Voltar</ion-button>
+        </ion-col>
+      </ion-row>
+	  </form>
+	</ion-list>
+	</ion-content>
